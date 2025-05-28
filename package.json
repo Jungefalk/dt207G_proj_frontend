@@ -1,0 +1,19 @@
+{
+  "name": "dt207g_proj_frontend",
+  "version": "1.0.0",
+  "description": "",
+  "source": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "parcel": "^2.15.2"
+  },
+  "browserslist": "> 0.5%, last 2 versions, not dead"
+}
