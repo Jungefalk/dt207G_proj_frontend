@@ -1,0 +1,13 @@
+
+/*Google fonts
+*Roboto
+*Rampart One
+*/
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/*inställningar body, html*/
+body, html{
+    padding: 0;
+    margin: 0;
+}
