@@ -12,90 +12,131 @@
 
 <body>
     <div class="container">
-    <!--  header start  -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Startsida</a></li>
-                <li><a href="menu.html">Meny</a></li>
-                <li><a href="index.html"><img src="images/logo.png" alt="Logga Gelato Spot"></a></li>
-                <li><a href="about.html">Om Oss</a></li>
-                <li><a href="about.html">Kontakt</a></li>
-            </ul>
-        </nav>
-    </header>
-    <!--  header end  -->
+        <!--  header start  -->
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Startsida</a></li>
+                    <li><a href="menu.html">Meny</a></li>
+                    <li><a href="index.html"><img src="images/logo.png" alt="Logga Gelato Spot"></a></li>
+                    <li><a href="about.html">Om Oss</a></li>
+                    <li><a href="about.html">Kontakt</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!--  header end  -->
 
-    <!--  footer start  -->
-    <footer>
-        <nav>
-            <ul>
-                <li><a href="index.html">Startsida</a></li>
-                <li><a href="menu.html">Meny</a></li>
-                <li><a href="about.html">Om Oss</a></li>
-                <li><a href="about.html">Kontakt</a></li>
-            </ul>
-        </nav>
+        <!-- main start -->
+        <main>
 
-        <section>
-            <h3>Följ oss på våra sociala kanaler:</h3>
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-square-facebook"></i>
-            <i class="fa-brands fa-square-snapchat"></i>
-        </section>
+            <div>
+                <nav>
+                    <ul>
+                        <li><a href="staffsite.html">Tillbaka</a></li>
+                    </ul>
+                </nav>
+            </div>
 
-        <div>
-            <a href="login.html">Personalingång</a>
-        </div>
+            <h1>Uppdarera meny</h1>
 
-    </footer>
-    <!--  footer end  -->
-</body>
+            <section>
+                <h2>Gelato</h2>
+                <button>Lägg till Gelato <i class="fa-solid fa-plus"></i> </button>
 
-</html></title>
-</head>
+                <div class="add_gelato">
 
-<body>
+                    <form method="post">
+                        <label for="gelato_name">Namn:</label><br>
+                        <input type="text" name="gelato_name" id="gelato_name"><br>
+                        <label for="flavour">Smak:</label><br>
+                        <input type="text" name="flavour" id="flavour"><br>
+                        <label for="allergens">Allergener:</label><br>
+                        <input type="text" name="allergens" id="allergens"><br>
+                        <label for="gelato_price">Pris:</label><br>
+                        <input type="text" name="gelato_price" id="gelato_price">
+                    </form>
 
-    <!--  header start  -->
-    <header>
-        <nav>
-            <ul>
-                <li><a class="current" href="index.html">Startsida</a></li>
-                <li><a href="menu.html">Meny</a></li>
-                <li><a href="index.html"><img src="images/logo.png" alt="Logga Gelato Spot"></a></li>
-                <li><a href="about.html">Om Oss</a></li>
-                <li><a href="about.html">Kontakt</a></li>
-            </ul>
-        </nav>
-    </header>
-    <!--  header end  -->
+                </div>
 
-    <!--  footer start  -->
-    <footer>
-        <nav>
-            <ul>
-                <li><a href="index.html">Startsida</a></li>
-                <li><a href="menu.html">Meny</a></li>
-                <li><a href="about.html">Om Oss</a></li>
-                <li><a href="about.html">Kontakt</a></li>
-            </ul>
-        </nav>
+                <div class="admin_menu" id="menu">
 
-        <section>
-            <h3>Följ oss på våra sociala kanaler:</h3>
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-square-facebook"></i>
-            <i class="fa-brands fa-square-snapchat"></i>
-        </section>
+                    <button>Ta bort</button>
+                    <button>Uppdatera</button>
+                </div>
+            </section>
 
-        <div>
-            <a href="login.html">Personalingång</a>
-        </div>
+            <section>
+                <button>Lägg till Dryck <i class="fa-solid fa-plus"></i> </button>
 
-    </footer>
-    <!--  footer end  -->
-      </div>
+                <div class="add_drink">
+
+                    <form method="post">
+                        <label for="drink_name">Namn:</label><br>
+                        <input type="text" name="drink_name" id="drink_name"><br>
+                        <label for="drink_price">Pris:</label><br>
+                        <input type="text" name="drink_price" id="drink_price">
+                    </form>
+
+                </div>
+
+                <div class="admin_menu" id="menu">
+
+                    <button>Ta bort</button>
+                    <button>Uppdatera</button>
+                </div>
+
+            </section>
+
+
+            <section>
+                <button>Lägg till topping <i class="fa-solid fa-plus"></i> </button>
+
+                <div class="add_topping">
+
+                    <form method="post">
+                        <label for="topping_name">Namn:</label><br>
+                        <input type="text" name="topping_name" id="topping_name"><br>
+                        <label for="topping_price">Pris:</label><br>
+                        <input type="text" name="topping_price" id="topping_price">
+                    </form>
+
+                </div>
+
+                <div class="admin_menu" id="menu">
+
+                    <button>Ta bort</button>
+                    <button>Uppdatera</button>
+                </div>
+                
+            </section>
+
+        </main>
+        <!-- main end -->
+
+        <!--  footer start  -->
+        <footer>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Startsida</a></li>
+                    <li><a href="menu.html">Meny</a></li>
+                    <li><a href="about.html">Om Oss</a></li>
+                    <li><a href="about.html">Kontakt</a></li>
+                </ul>
+            </nav>
+
+            <section>
+                <h3>Följ oss på våra sociala kanaler:</h3>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-square-facebook"></i>
+                <i class="fa-brands fa-square-snapchat"></i>
+            </section>
+
+            <div>
+                <a href="login.html">Personalingång</a>
+            </div>
+
+        </footer>
+        <!--  footer end  -->
 </body>
 
 </html>
