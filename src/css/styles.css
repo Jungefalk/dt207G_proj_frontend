@@ -17,8 +17,12 @@ html {
 /* Header */
 
 .header-container {
+    position: fixed;
+    width: 100%;
+    top: 0px;
     background-color: #F7A4A4;
     text-align: center;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.5) ;
 }
 
 .nav-left .current,
@@ -130,7 +134,17 @@ i {
     border-bottom: 2px solid black;
 }
 
+/* Main */
+
+main{
+margin-top: 8.5em;
+}
+
 /* Startsida */
+
 .hero-img img{
     width: 100%;
 }
+
+
+
