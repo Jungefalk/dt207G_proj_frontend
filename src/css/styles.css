@@ -22,7 +22,7 @@ html {
     top: 0px;
     background-color: #F7A4A4;
     text-align: center;
-    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.5) ;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.5);
 }
 
 .nav-left .current,
@@ -136,15 +136,141 @@ i {
 
 /* Main */
 
-main{
-margin-top: 8.5em;
+main {
+    margin-top: 10.4em;
 }
 
 /* Startsida */
 
-.hero-img img{
+.hero-img img {
     width: 100%;
 }
 
+.about-product {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 2em;
+}
 
+.about-product img {
+    width: 100%;
+    max-width: 600px;
+}
 
+.about-product h2 {
+    text-transform: uppercase;
+    font-size: 1.2em;
+    padding-bottom: 1em;
+}
+
+.about-product-ul {
+    font-size: 1.2em;
+    line-height: 1.8em;
+    margin-right: 5em;
+    margin-top: 2em;
+}
+
+.comment-section {
+    background-color: #F7A4A4;
+    padding: 2em;
+}
+
+.comment-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2em;
+    margin: 0 auto;
+    width: 85%;
+    max-width: 1200px;
+
+}
+
+.comment-section h2,
+.comment-section h3 {
+    color: #F7F0F0;
+    font-size: 2em;
+    text-align: center;
+    font-weight: 600;
+}
+
+.comment-section h2 {
+    text-transform: uppercase;
+}
+
+.comment-section p {
+    margin-top: -0.5em;
+}
+
+.comment-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 400px;
+}
+
+.comment-form input,
+.comment-form select {
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+.comment-form textarea {
+    border: 1px solid black;
+    border-radius: 3px;
+
+}
+
+.comment-form label {
+    font-size: 1.5em;
+    font-weight: 300;
+    margin-bottom: -1em;
+}
+
+.comment-form button {
+    border: none;
+    font-size: 1.3em;
+    margin-top: 1em;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 0.5em 2em 0.5em 2em;
+    box-shadow: 0 4 4 0 rgba(0, 0, 0, 0.3);
+
+}
+
+.comment-form button:hover {
+    box-shadow: none;
+    cursor: pointer;
+
+}
+
+.comment-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow-y: auto;
+    max-height: 450px;
+}
+
+.comment {
+    display: grid;
+    background-color: #F7CFCF;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 300px;
+    height: 10em;
+    padding: 0.5em;
+    margin-top: 1.5em;
+    font-size: 1em;
+    margin-left: 1.2em;
+    box-shadow: 0 4 4 0 rgba(0, 0, 0, 0.3);
+
+}
+
+.comment h4{
+    text-transform: uppercase;
+    font-size: 1.2em;
+    font-weight: 400;
+    margin-bottom: 0.2em;
+}

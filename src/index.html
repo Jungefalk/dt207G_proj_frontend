@@ -41,36 +41,38 @@
         <main>
 
             <div class="hero-img">
-           <img src="images/hero-img.webp" alt="">
+                <img src="images/hero-img.webp" alt="">
             </div>
 
-            <section>
-                <img src="images/gelato_cone.png" alt="glass i strut">
-                <h2>Varför vår gelato is the shit:</h2>
-                <ul>
-                    <li>Gjort på äkta råvaror - inga tillsatser eller konstigheter</li>
-                    <li>Vi använder lokala och ekologiska ingredienser</li>
-                    <li>Vi har veganska och laktosfria alternativ för alla gelato-lovers där ute</li>
-                    <li>Vi tillverkar vår gelato i små batcher för att alltid kunna garantera
-                        att din gelato är helt färsk! </li>
-                    <li>Smakkombinationerna är to die for</li>
-                    <li>Vi älskar det vi gör och vi gör det med kärlek </li>
-                </ul>
+            <section class="about-product">
+                <div>
+                    <img src="images/gelato_cone.png" alt="glass i strut">
+                </div>
+
+                <div class="about-product-ul">
+                    <h2>Varför vår gelato är bäst:</h2>
+                    <ul>
+                        <li>Gjort på äkta råvaror - inga konstigheter</li>
+                        <li>Vi använder lokala och ekologiska ingredienser</li>
+                        <li>Vi har veganska och laktosfria alternativ</li>
+                        <li>Vi tillverkar vår gelato i små batcher för att alltid kunna garantera
+                            att din gelato är helt färsk!</li>
+                        <li>Smakkombinationerna är unika och lyxiga</li>
+                    </ul>
+                </div>
             </section>
 
-            <section>
+            <section class="comment-section">
+
                 <h2>Vad tycker våra kunder?</h2>
-                <p>Lämna en recension</p>
-                <div id="comment"></div>
+                <h3>Lämna en recension</h3>
 
-                <form method="post">
+                <div class="comment-container">
 
-                    <div>
+                    <form class="comment-form" method="post">
                         <label for="name">Namn:</label> <br>
-                        <input type="text" name="name" id="name">
-                    </div>
+                        <input type="text" name="name" id="name"><br>
 
-                    <div>
                         <label for="rating">Betyg:</label> <br>
                         <select name="rating" id="rating">
                             <option value="5">⭐️⭐️⭐️⭐️⭐️</option>
@@ -78,46 +80,46 @@
                             <option value="3">⭐️⭐️⭐️</option>
                             <option value="2">⭐️⭐️</option>
                             <option value="1">⭐️</option>
-                        </select>
-                    </div>
+                        </select><br>
 
-                    <div>
                         <label for="recension">Recension:</label><br>
-                        <textarea name="recension" id="recension" rows="10"></textarea>
-                    </div>
+                        <textarea name="recension" id="recension" rows="5"></textarea><br>
 
-                    <button type="submit">Skicka</button>
+                        <button type="submit">Skicka</button>
+                    </form>
 
-                </form>
 
-            </section>
-        </main>
-        <!-- main end -->
+                    <div id="comment-list" class="comment-list"></div>
+                </div>
+    </div>
+    </section>
+    </main>
+    <!-- main end -->
 
-        <!--  footer start  -->
-        <footer>
-            <nav class="footer-nav">
-                <ul>
-                    <li><a href="index.html">startsida</a></li>
-                    <li><a href="menu.html">meny</a></li>
-                    <li><a href="about.html">om oss</a></li>
-                    <li><a href="about.html">kontakt</a></li>
-                </ul>
-            </nav>
+    <!--  footer start  -->
+    <footer>
+        <nav class="footer-nav">
+            <ul>
+                <li><a href="index.html">startsida</a></li>
+                <li><a href="menu.html">meny</a></li>
+                <li><a href="about.html">om oss</a></li>
+                <li><a href="about.html">kontakt</a></li>
+            </ul>
+        </nav>
 
-            <section>
-                <h3>Följ oss på våra sociala kanaler:</h3>
-                <i class="fa-brands fa-instagram"></i>
-                <i class="fa-brands fa-square-facebook"></i>
-                <i class="fa-brands fa-square-snapchat"></i>
-            </section>
+        <section>
+            <h3>Följ oss på våra sociala kanaler:</h3>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-square-facebook"></i>
+            <i class="fa-brands fa-square-snapchat"></i>
+        </section>
 
-            <div>
-                <a class="admin-link" href="login.html">Personalingång</a>
-            </div>
+        <div>
+            <a class="admin-link" href="login.html">Personalingång</a>
+        </div>
 
-        </footer>
-        <!--  footer end  -->
+    </footer>
+    <!--  footer end  -->
     </div>
 </body>
 
