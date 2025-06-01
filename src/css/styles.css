@@ -268,9 +268,55 @@ main {
 
 }
 
-.comment h4{
+.comment h4 {
     text-transform: uppercase;
     font-size: 1.2em;
     font-weight: 400;
     margin-bottom: 0.2em;
+}
+
+/* Meny */
+
+.menu-container {
+    background-image: url(../images/menu-background.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: 3em;
+    height: 140vh;
+    width: 100%;
+    text-align: center;
+}
+
+.menu-container h1,
+.menu-container h2 {
+    font-family: "Rampart One", sans-serif;
+    text-transform: uppercase;
+}
+
+.menu-container h1 {
+    font-size: 3em;
+    padding-top: 4em;
+    margin-bottom: -3em;
+}
+
+.menu-container h2 {
+    font-size: 1.7em;
+}
+
+.menu-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 900px;
+    margin: 0 auto;
+    margin-top:  10em;
+}
+
+.menu-list h3{
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.menu-list article{
+    margin-bottom: 3em;
 }
