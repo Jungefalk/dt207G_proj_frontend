@@ -320,3 +320,30 @@ main {
 .menu-list article{
     margin-bottom: 3em;
 }
+
+/* Om oss */
+
+.about-container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.about-container img{
+    width: 100%;
+    max-width: 500px;
+}
+
+.about-container article{
+    max-width: 700px;
+    line-height: 2em;
+    font-size: 1.2em;
+    margin-bottom: 2em;
+}
+
+.about-main h1{
+font-family: "Rampart one", sans-serif;
+font-size: 3em;
+text-align: center;
+padding-top: 1.5em;
+}
