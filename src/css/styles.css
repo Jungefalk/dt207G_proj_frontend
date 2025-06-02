@@ -426,3 +426,8 @@ main {
     color: black;
     margin: 2.5em 3em 7em 3em;
     }
+
+    .staffsite-container a:hover{
+        box-shadow: none;
+        text-decoration: underline 2px;
+    }
