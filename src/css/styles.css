@@ -425,9 +425,56 @@ main {
     text-decoration: none;
     color: black;
     margin: 2.5em 3em 7em 3em;
-    }
+}
 
-    .staffsite-container a:hover{
-        box-shadow: none;
-        text-decoration: underline 2px;
-    }
+.staffsite-container a:hover {
+    box-shadow: none;
+    text-decoration: underline 2px;
+}
+
+/* Uppdatera Meny */
+
+.update-menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.update-menu-container h1 {
+    font-family: "Rampart One", sans-serif;
+    font-size: 3em;
+}
+
+.update-menu-container input {
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 3px;
+    width: 300px;
+    margin-bottom: 1em;
+}
+
+.update-menu-container label {
+    font-size: 1.3em;
+}
+
+.add-btn {
+    background-color: #F7A4A4;
+    border: none;
+    font-size: 1.3em;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 0.5em 2em 0.5em 2em;
+    box-shadow: 0 4 4 0 rgba(0, 0, 0, 0.3);
+    width: 305px;
+}
+
+.add-btn:hover {
+    box-shadow: none;
+    text-decoration: underline 2px;
+    cursor: pointer;
+
+}
+
+.update-menu-container form{
+    display: none;
+}

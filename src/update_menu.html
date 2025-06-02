@@ -39,7 +39,6 @@
 
         <!-- main start -->
         <main>
-
             <div>
                 <nav>
                     <ul>
@@ -48,79 +47,100 @@
                 </nav>
             </div>
 
-            <h1>Uppdarera meny</h1>
+            <div class="update-menu-container">
 
-            <section>
-                <h2>Gelato</h2>
-                <button>Lägg till Gelato <i class="fa-solid fa-plus"></i> </button>
+                <h1>Uppdatera meny</h1>
 
-                <div class="add_gelato">
+                <!-- Gelato -->
+                <section>
+                    <h2>Gelato</h2>
+                    <button>Lägg till Gelato <i class="fa-solid fa-plus"></i> </button>
 
-                    <form method="post">
-                        <label for="gelato_name">Namn:</label><br>
-                        <input type="text" name="gelato_name" id="gelato_name"><br>
-                        <label for="flavour">Smak:</label><br>
-                        <input type="text" name="flavour" id="flavour"><br>
-                        <label for="allergens">Allergener:</label><br>
-                        <input type="text" name="allergens" id="allergens"><br>
-                        <label for="gelato_price">Pris:</label><br>
-                        <input type="text" name="gelato_price" id="gelato_price">
-                    </form>
+                    <div class="add-gelato-form">
 
-                </div>
+                        <form method="post">
+                            <label for="gelato_name">Namn:</label><br>
+                            <input type="text" name="gelato_name" id="gelato_name"><br>
+                            <label for="flavour">Smak:</label><br>
+                            <input type="text" name="flavour" id="flavour"><br>
+                            <label for="allergens">Allergener:</label><br>
+                            <input type="text" name="allergens" id="allergens"><br>
+                            <label for="gelato_price">Pris:</label><br>
+                            <input type="text" name="gelato_price" id="gelato_price"><br>
+                            <button class="add-btn" type="submit">Lägg till</button>
+                        </form>
 
-                <div class="admin_menu" id="menu">
+                    </div>
 
-                    <button>Ta bort</button>
-                    <button>Uppdatera</button>
-                </div>
-            </section>
+                    <div class="admi-menu" id="gelato-list">
 
-            <section>
-                <button>Lägg till Dryck <i class="fa-solid fa-plus"></i> </button>
+                        <h3>Chokladdrömmar</h3>
+                        <p>Choklad och hasselnöt</p>
+                        <p>innehåller nötter</p>
+                        <p>50 kr</p>
+                        <button>Ta bort</button>
+                        <button>Uppdatera</button>
+                    </div>
 
-                <div class="add_drink">
+                </section>
 
-                    <form method="post">
-                        <label for="drink_name">Namn:</label><br>
-                        <input type="text" name="drink_name" id="drink_name"><br>
-                        <label for="drink_price">Pris:</label><br>
-                        <input type="text" name="drink_price" id="drink_price">
-                    </form>
+                <!-- Topping -->
+                <section>
+                    <button>Lägg till topping <i class="fa-solid fa-plus"></i> </button>
 
-                </div>
+                    <div class="add-topping-form">
 
-                <div class="admin_menu" id="menu">
+                        <form method="post">
+                            <label for="topping_name">Namn:</label><br>
+                            <input type="text" name="topping_name" id="topping_name"><br>
+                            <label for="topping_price">Pris:</label><br>
+                            <input type="text" name="topping_price" id="topping_price"><br>
+                            <button class="add-btn" type="submit">Lägg till</button>
+                        </form>
 
-                    <button>Ta bort</button>
-                    <button>Uppdatera</button>
-                </div>
+                    </div>
 
-            </section>
+                    <div class="admin-menu" id="topping-list">
 
+                        <h3>Chokladdrömmar</h3>
+                        <p>Choklad och hasselnöt</p>
+                        <p>innehåller nötter</p>
+                        <p>50 kr</p>
 
-            <section>
-                <button>Lägg till topping <i class="fa-solid fa-plus"></i> </button>
+                        <button>Ta bort</button>
+                        <button>Uppdatera</button>
+                    </div>
 
-                <div class="add_topping">
+                </section>
 
-                    <form method="post">
-                        <label for="topping_name">Namn:</label><br>
-                        <input type="text" name="topping_name" id="topping_name"><br>
-                        <label for="topping_price">Pris:</label><br>
-                        <input type="text" name="topping_price" id="topping_price">
-                    </form>
+                <!-- Dryck -->
+                <section>
+                    <button>Lägg till Dryck <i class="fa-solid fa-plus"></i> </button>
 
-                </div>
+                    <div class="add-drink-form">
 
-                <div class="admin_menu" id="menu">
+                        <form method="post">
+                            <label for="drink_name">Namn:</label><br>
+                            <input type="text" name="drink_name" id="drink_name"><br>
+                            <label for="drink_price">Pris:</label><br>
+                            <input type="text" name="drink_price" id="drink_price"><br>
+                            <button class="add-btn" type="submit">Lägg till</button>
 
-                    <button>Ta bort</button>
-                    <button>Uppdatera</button>
-                </div>
+                    </div>
 
-            </section>
+                    <div class="admin-menu" id="drink-list">
 
+                        <h3>Chokladdrömmar</h3>
+                        <p>Choklad och hasselnöt</p>
+                        <p>innehåller nötter</p>
+                        <p>50 kr</p>
+
+                        <button>Ta bort</button>
+                        <button>Uppdatera</button>
+                    </div>
+
+                </section>
+            </div>
         </main>
         <!-- main end -->
 
