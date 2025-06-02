@@ -47,16 +47,16 @@
                 </nav>
             </div>
 
-            <div class="update-menu-container">
+            <div class="update-container">
 
                 <h1>Uppdatera meny</h1>
 
                 <!-- Gelato -->
                 <section>
                     <h2>Gelato</h2>
-                    <button>Lägg till Gelato <i class="fa-solid fa-plus"></i> </button>
+                    <button class="toggle-btn">Lägg till Gelato <i class="fa-solid fa-plus"></i> </button>
 
-                    <div class="add-gelato-form">
+                    <div class="add-form">
 
                         <form method="post">
                             <label for="gelato_name">Namn:</label><br>
@@ -79,9 +79,9 @@
                 <!-- Topping -->
                 <section>
                     <h2>Topping</h2>
-                    <button>Lägg till topping <i class="fa-solid fa-plus"></i> </button>
+                    <button class="toggle-btn">Lägg till topping <i class="fa-solid fa-plus"></i> </button>
 
-                    <div class="add-topping-form">
+                    <div class="add-form">
 
                         <form method="post">
                             <label for="topping_name">Namn:</label><br>
@@ -100,9 +100,9 @@
                 <!-- Dryck -->
                 <section>
                     <h2>Dryck</h2>
-                    <button>Lägg till Dryck <i class="fa-solid fa-plus"></i> </button>
+                    <button class="toggle-btn">Lägg till Dryck <i class="fa-solid fa-plus"></i> </button>
 
-                    <div class="add-drink-form">
+                    <div class="add-form">
 
                         <form method="post">
                             <label for="drink_name">Namn:</label><br>
@@ -111,6 +111,7 @@
                             <input type="text" name="drink_price" id="drink_price"><br>
                             <button class="add-btn" type="submit">Lägg till</button>
 
+                        </form>
                     </div>
 
                     <div class="admin-menu" id="drink-list"></div>
@@ -144,6 +145,7 @@
 
         </footer>
         <!--  footer end  -->
+    </div>
 </body>
 
 </html>
