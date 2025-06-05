@@ -29,6 +29,8 @@ async function getComments() {
 
     let commentListEl = document.getElementById("comment-list");
 
+    commentListEl.innerHTML = "";
+
     try {
 
         const response = await fetch(`https://dt207g-proj-backend.onrender.com/api/comment`)
