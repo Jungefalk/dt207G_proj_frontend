@@ -4,8 +4,17 @@
  * Av: Caroline Jungefalk
  */
 
+//hämta id:n
+let postCommentBtnEl = document.getElementById("postCommentBtn");
+
 //händelselyssnare
 window.addEventListener("load", init);
+
+postCommentBtnEl.addEventListener("click", function (event) {
+    event.preventDefault();
+    postComments();
+})
+
 
 //init
 function init() {
@@ -17,7 +26,8 @@ function init() {
 //Hämta kommentarer
 async function getComments() {
 
-    let commentListEl = document.getElementById("comment-list")
+
+    let commentListEl = document.getElementById("comment-list");
 
     try {
 
@@ -76,25 +86,46 @@ async function postComments() {
     let nameInpurErr = document.getElementById("nameInputErr");
     let ratingInputErr = document.getElementById("ratingInputErr");
 
-
     //kontrollera inputfälten
     if (nameEl.value === "") {
         nameInpurErr.innerHTML = "Vänligen ange ditt namn";
-        return
     };
 
-    if (ratingEl.value === ""){
+    if (ratingEl.value === "") {
         ratingInputErr.innerHTML = "Vänligen välj ett betyg"
-        return
+        return;
     };
 
     //Lagra värden från input
-    let newComment ={
+    let newComment = {
         name: nameEl.value,
         rating: ratingEl.value,
-        comment: commentEl.value
-    }
+        comment: recensionEl.value
+    };
 
+    //postanrop
+    try {
+        const response = await fetch(`https://dt207g-proj-backend.onrender.com/api/comment`, {
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(newComment)
+        });
+        if (!response.ok) {
+            throw new Error("Fel vid anslutning: " + response.status);
+        }
+
+        //Töm inputfält
+        nameEl.value = "";
+        ratingEl.value = "";
+        recensionEl.value = "";
+
+        getComments();
+
+    } catch (error) {
+        console.error("Det uppstod ett fel: " + error.message);
+    };
 
 };
 
