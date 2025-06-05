@@ -80,11 +80,20 @@ async function postComments() {
     //kontrollera inputfälten
     if (nameEl.value === "") {
         nameInpurErr.innerHTML = "Vänligen ange ditt namn";
+        return
     };
 
     if (ratingEl.value === ""){
         ratingInputErr.innerHTML = "Vänligen välj ett betyg"
+        return
     };
+
+    //Lagra värden från input
+    let newComment ={
+        name: nameEl.value,
+        rating: ratingEl.value,
+        comment: commentEl.value
+    }
 
 
 };
