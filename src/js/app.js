@@ -29,7 +29,11 @@ async function getComments() {
 
     let commentListEl = document.getElementById("comment-list");
 
+    //Töm innerHTML
     commentListEl.innerHTML = "";
+    nameInputErr.innerHTML = "";
+    ratingInputErr.innerHTML = "";
+    
 
     try {
 
