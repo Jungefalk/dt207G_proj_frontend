@@ -20,20 +20,21 @@ postCommentBtnEl.addEventListener("click", function (event) {
 function init() {
 
     console.log("Sidan har laddat...")
-    getComments()
+    getComments();
+    getGelato();
 };
 
 //Hämta kommentarer
 async function getComments() {
 
-
+    //hämta id
     let commentListEl = document.getElementById("comment-list");
 
     //Töm innerHTML
     commentListEl.innerHTML = "";
     nameInputErr.innerHTML = "";
     ratingInputErr.innerHTML = "";
-    
+
 
     try {
 
@@ -89,12 +90,12 @@ async function postComments() {
     let nameEl = document.getElementById("name");
     let ratingEl = document.getElementById("rating");
     let recensionEl = document.getElementById("recension");
-    let nameInpurErr = document.getElementById("nameInputErr");
+    let nameInputErr = document.getElementById("nameInputErr");
     let ratingInputErr = document.getElementById("ratingInputErr");
 
     //kontrollera inputfälten
     if (nameEl.value === "") {
-        nameInpurErr.innerHTML = "Vänligen ange ditt namn";
+        nameInputErr.innerHTML = "Vänligen ange ditt namn";
     };
 
     if (ratingEl.value === "") {
@@ -142,6 +143,38 @@ async function deleteComments() {
 
 //Hämta gelato
 async function getGelato() {
+
+    //hämta id
+    let menuGelatoEl = document.getElementById("menu-gelato");
+
+    //Get-anrop
+    try {
+        const response = await fetch(`https://dt207g-proj-backend.onrender.com/api/gelato`)
+        if (!response.ok) {
+            throw new Error("Fel vid anslutning: " + response.status);
+        }
+
+        const data = await response.json();
+
+        data.forEach(gelato => {
+
+            let newArticleEl = document.createElement("article");
+            newArticleEl.innerHTML = `
+            <h3>${gelato.name}</h3>
+            <p>${gelato.ingredients}</p>
+            <p>${gelato.info}</p>
+            <p>${gelato.price} kr</p>
+            `
+            menuGelatoEl.appendChild(newArticleEl);
+
+        });
+
+        console.log(data);
+
+    } catch (error) {
+        console.error("Det uppstod ett fel: " + error.message);
+    }
+
 
 };
 
