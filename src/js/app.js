@@ -27,6 +27,7 @@ function init() {
     getComments();
     getGelato();
     getTopping();
+    getDrink();
 };
 
 //Hämta kommentarer
@@ -241,6 +242,35 @@ async function deleteTopping() {
 
 //Hämta drink
 async function getDrink() {
+
+    //hämta id
+    let menuDrinkEl = document.getElementById("menu-drink");
+
+    //Get-anrop
+    try {
+        const response = await fetch(`https://dt207g-proj-backend.onrender.com/api/drink`)
+        if (!response.ok) {
+            throw new Error("Fel vid anslutning: " + response.status);
+        }
+
+        const data = await response.json();
+
+        data.forEach(drink => {
+
+            let newArticleEl = document.createElement("article");
+            newArticleEl.innerHTML = `
+            <h3>${drink.name}</h3>
+            <p>${drink.price} kr</p>
+            `
+            menuDrinkEl.appendChild(newArticleEl);
+
+        });
+
+        console.log(data);
+
+    } catch (error) {
+        console.error("Det uppstod ett fel: " + error.message);
+    }
 
 };
 
