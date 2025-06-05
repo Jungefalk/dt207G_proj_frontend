@@ -6,6 +6,10 @@
 
 //hämta id:n
 let postCommentBtnEl = document.getElementById("postCommentBtn");
+let nameInputErr = document.getElementById("nameInputErr");
+let ratingInputErr = document.getElementById("ratingInputErr");
+let commentListEl = document.getElementById("comment-list");
+
 
 //händelselyssnare
 window.addEventListener("load", init);
@@ -22,13 +26,12 @@ function init() {
     console.log("Sidan har laddat...")
     getComments();
     getGelato();
+    getTopping();
 };
 
 //Hämta kommentarer
 async function getComments() {
 
-    //hämta id
-    let commentListEl = document.getElementById("comment-list");
 
     //Töm innerHTML
     commentListEl.innerHTML = "";
@@ -90,8 +93,6 @@ async function postComments() {
     let nameEl = document.getElementById("name");
     let ratingEl = document.getElementById("rating");
     let recensionEl = document.getElementById("recension");
-    let nameInputErr = document.getElementById("nameInputErr");
-    let ratingInputErr = document.getElementById("ratingInputErr");
 
     //kontrollera inputfälten
     if (nameEl.value === "") {
@@ -195,6 +196,36 @@ async function deleteGelato() {
 
 //Hämta topping
 async function getTopping() {
+
+    //hämta id
+    let menuToppingEl = document.getElementById("menu-topping");
+
+    //Get-anrop
+    try {
+        const response = await fetch(`https://dt207g-proj-backend.onrender.com/api/topping`)
+        if (!response.ok) {
+            throw new Error("Fel vid anslutning: " + response.status);
+        }
+
+        const data = await response.json();
+
+        data.forEach(topping => {
+
+            let newArticleEl = document.createElement("article");
+            newArticleEl.innerHTML = `
+            <h3>${topping.name}</h3>
+            <p>${topping.price} kr</p>
+            `
+            menuToppingEl.appendChild(newArticleEl);
+
+        });
+
+        console.log(data);
+
+    } catch (error) {
+        console.error("Det uppstod ett fel: " + error.message);
+    }
+
 
 };
 
