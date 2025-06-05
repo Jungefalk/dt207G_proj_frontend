@@ -69,6 +69,24 @@ async function getComments() {
 //Lägg till kommentar
 async function postComments() {
 
+    //hämta id:n
+    let nameEl = document.getElementById("name");
+    let ratingEl = document.getElementById("rating");
+    let recensionEl = document.getElementById("recension");
+    let nameInpurErr = document.getElementById("nameInputErr");
+    let ratingInputErr = document.getElementById("ratingInputErr");
+
+
+    //kontrollera inputfälten
+    if (nameEl.value === "") {
+        nameInpurErr.innerHTML = "Vänligen ange ditt namn";
+    };
+
+    if (ratingEl.value === ""){
+        ratingInputErr.innerHTML = "Vänligen välj ett betyg"
+    };
+
+
 };
 
 //Ta bort kommentar

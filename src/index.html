@@ -71,10 +71,13 @@
 
                     <form class="comment-form" method="post">
                         <label for="name">Namn:</label> <br>
+                        <div id="nameInputErr"></div>
                         <input type="text" name="name" id="name"><br>
 
                         <label for="rating">Betyg:</label> <br>
+                        <div id="ratingInputErr"></div>
                         <select name="rating" id="rating">
+                            <option value="" disabled selected>Välj betyg⭐️</option>
                             <option value="5">⭐️⭐️⭐️⭐️⭐️</option>
                             <option value="4">⭐️⭐️⭐️⭐️</option>
                             <option value="3">⭐️⭐️⭐️</option>
