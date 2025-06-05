@@ -18,7 +18,7 @@ function init() {
 async function getComments() {
 
     let commentListEl = document.getElementById("comment-list")
-    
+
     try {
 
         const response = await fetch(`https://dt207g-proj-backend.onrender.com/api/comment`)
@@ -32,13 +32,30 @@ async function getComments() {
 
         //Loopa data skriv ut till skärmen med innerHTML
         data.forEach(comment => {
-            
+
+            //formattera datum
+            let date = new Date(comment.date);
+            let day = date.getDate();
+            let month = date.getMonth();
+            let year = date.getFullYear();
+
+            if (day < 10) {
+                day = "0" + day;
+            }
+
+            if (month < 10) {
+                month = "0" + month;
+            }
+
+            let formattedDate = `${year}-${month}-${day}`
+
+            //skapa article-element och skriv ut till innerHTML
             let newArticleEl = document.createElement("article");
             newArticleEl.classList.add("comment")
             newArticleEl.innerHTML = `<h4>${comment.name}</h4>
             <p>${comment.rating}</p>
             <p>${comment.comment}</p>
-            <p>${comment.date}</p>`
+            <p>${formattedDate}</p>`
 
             commentListEl.appendChild(newArticleEl);
         });
