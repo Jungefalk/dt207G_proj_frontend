@@ -8,78 +8,105 @@
 window.addEventListener("load", init);
 
 //init
-function init(){
+function init() {
 
     console.log("Sidan har laddat...")
-};
-
-//Hämta gelato
-async function getGelato() {
-    
-};
-
-//Lägg till gelato
-async function postGelato() {
-    
-};
-
-//Uppdatera gelato
-async function putGelato() {
-    
-};
-
-//Ta bort gelato
-async function deleteGelato() {
-    
-};
-
-//Hämta topping
-async function getTopping() {
-    
-};
-
-//Lägg till topping
-async function postTopping() {
-    
-};
-
-//Ta bort topping
-async function deleteTopping() {
-    
-};
-
-//Hämta drink
-async function getDrink() {
-    
-};
-
-//Lägg till drink
-async function postDrink() {
-    
-};
-
-//Ta bort drink
-async function deleteDrink() {
-    
+    getComments()
 };
 
 //Hämta kommentarer
 async function getComments() {
+
+    let commentListEl = document.getElementById("comment-list")
     
+    try {
+
+        const response = await fetch(`https://dt207g-proj-backend.onrender.com/api/comment`)
+        if (!response.ok) {
+            throw new Error("Fel vid anslutning " + response.status)
+        };
+
+        //lagra datan
+        const data = await response.json();
+        console.log(data);
+
+        //Loopa data skriv ut till skärmen med innerHTML
+        data.forEach(comment => {
+            
+            let newArticleEl = document.createElement("article");
+            newArticleEl.classList.add("comment")
+            newArticleEl.innerHTML = `<h4>${comment.name}</h4>
+            <p>${comment.rating}</p>
+            <p>${comment.comment}</p>
+            <p>${comment.date}</p>`
+
+            commentListEl.appendChild(newArticleEl);
+        });
+
+
+    } catch (error) {
+        console.log("det uppstod ett fel " + error.message);
+    }
 };
 
 //Lägg till kommentar
 async function postComments() {
-    
+
 };
 
 //Ta bort kommentar
 async function deleteComments() {
-    
+
 };
 
+//Hämta gelato
+async function getGelato() {
 
+};
 
+//Lägg till gelato
+async function postGelato() {
 
+};
+
+//Uppdatera gelato
+async function putGelato() {
+
+};
+
+//Ta bort gelato
+async function deleteGelato() {
+
+};
+
+//Hämta topping
+async function getTopping() {
+
+};
+
+//Lägg till topping
+async function postTopping() {
+
+};
+
+//Ta bort topping
+async function deleteTopping() {
+
+};
+
+//Hämta drink
+async function getDrink() {
+
+};
+
+//Lägg till drink
+async function postDrink() {
+
+};
+
+//Ta bort drink
+async function deleteDrink() {
+
+};
 
 
