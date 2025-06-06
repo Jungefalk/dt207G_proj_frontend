@@ -302,10 +302,18 @@ main {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    background-position-y: 3em;
-    height: 140vh;
+    background-position-y: 2em;
     width: 100%;
     text-align: center;
+    padding-bottom: 3em;
+}
+
+.menu-section{
+    margin-top: 13em;
+}
+
+.menu-section h2{
+    margin-bottom: 1em;
 }
 
 .menu-container h1,
@@ -317,28 +325,28 @@ main {
 .menu-container h1 {
     font-size: 3em;
     padding-top: 4em;
-    margin-bottom: -3em;
+    margin-bottom: -5em;
 }
 
-.menu-container h2 {
-    font-size: 1.7em;
-}
 
 .menu-list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    max-width: 900px;
+    max-width: 800px;
     margin: 0 auto;
     margin-top: 10em;
+    font-size: 1.2em;
 }
 
+
 .menu-list h3 {
-    font-weight: 300;
+    font-weight: 400;
     text-transform: uppercase;
 }
 
 .menu-list article {
     margin-bottom: 3em;
+    font-weight: 300;
 }
 
 /* Om oss */
@@ -642,6 +650,46 @@ main {
         margin-top: 0.1em;
     }
 
+    /* meny-sida */
+
+    .menu-container {
+        background-image: none;
+        padding: 0;
+        margin-top: -6em;
+    }
+
+
+    .menu-container h1 {
+        font-size: 1.5em;
+    }
+
+    .menu-container h2 {
+        font-size: 0.7em;
+        margin-top: 8em;
+    }
+
+    .menu-list {
+        border: 10px solid #ff666c;
+        box-sizing: border-box;
+        margin-top: -3em;
+        font-size: 0.9em;
+        padding: 0.5em;
+    }
+
+    .menu-list h3 {
+        font-size: 0.7em;
+        font-weight: 400;
+    }
+
+    .menu-list p {
+        font-size: 0.6em;
+        font-weight: 300;
+        margin-top: -0.4em;
+    }
+
+
+
+
 }
 
 @media (min-width: 501px) {
@@ -656,50 +704,105 @@ main {
         margin-top: -1em;
     }
 
-    @media (min-width: 701px) and (max-width: 1050px) {
+    /*Meny-sida*/
 
-        .nav-left li,
-        .nav-right li {
-            font-size: 0.6em;
-            margin-bottom: 2.5em;
-        }
-
-        .hero-img {
-            margin-top: -4em;
-        }
-
-        .about-product {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-        }
-
-        .about-product-ul {
-            font-size: 0.9em;
-            margin-bottom: 2em;
-        }
-
-        .about-product img {
-            width: 100%;
-        }
-
-        .comment {
-            font-size: 0.9em;
-        }
-
-        .comment h4 {
-            font-size: 1em;
-            margin-top: 0.5em;
-        }
-
+    .menu-container {
+        margin-top: -2em;
     }
 
-    @media (min-width: 920px) and (max-width: 1050px) {
-
-        .nav-left li,
-        .nav-right li {
-            font-size: 0.9em;
-        }
-
+    .menu-container h2 {
+        font-size: 1.2em;
+        margin-top: 5em;
     }
+
+    .menu-list h3 {
+        font-size: 0.9em;
+    }
+
+    .menu-list p {
+        font-size: 0.8em;
+    }
+
+}
+
+@media (min-width: 701px) and (max-width: 1050px) {
+
+    /*Startsida*/
+
+    .nav-left li,
+    .nav-right li {
+        font-size: 0.6em;
+        margin-bottom: 2.5em;
+    }
+
+    .hero-img {
+        margin-top: -4em;
+    }
+
+    .about-product {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .about-product-ul {
+        font-size: 0.9em;
+        margin-bottom: 2em;
+    }
+
+    .about-product img {
+        width: 100%;
+    }
+
+    .comment {
+        font-size: 0.9em;
+    }
+
+    .comment h4 {
+        font-size: 1em;
+        margin-top: 0.5em;
+    }
+
+    /* Meny-sida */
+
+    .menu-container {
+        margin-top: -5em;
+    }
+
+    .menu-container h1 {
+        font-size: 2.2em;
+        margin-bottom: -4em;
+    }
+
+    .menu-container h2 {
+        margin-top: -1em;
+    }
+
+    .menu-list{
+        max-width: 650px;
+    }
+
+    .menu-list p {
+        font-size: 0.6em;
+        font-weight: 300;
+        margin-top: -0.4em;
+    }
+
+
+}
+
+@media (min-width: 920px) and (max-width: 1070px) {
+
+    /*Header*/
+    .nav-left li,
+    .nav-right li {
+        font-size: 0.9em;
+    }
+
+    /* Meny */
+    .menu-container h2{
+        padding-bottom: 2em;
+    }
+
+  
 
 }
