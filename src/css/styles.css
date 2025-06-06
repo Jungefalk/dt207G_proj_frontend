@@ -308,11 +308,11 @@ main {
     padding-bottom: 3em;
 }
 
-.menu-section{
+.menu-section {
     margin-top: 13em;
 }
 
-.menu-section h2{
+.menu-section h2 {
     margin-bottom: 1em;
 }
 
@@ -354,7 +354,9 @@ main {
 .about-container {
     display: flex;
     justify-content: center;
-    width: 100%;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .about-container img {
@@ -687,7 +689,17 @@ main {
         margin-top: -0.4em;
     }
 
+    /* Om sida */
 
+    .about-container {
+        display: block;
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    .about-container h2 {
+        text-align: center;
+    }
 
 
 }
@@ -777,7 +789,7 @@ main {
         margin-top: -1em;
     }
 
-    .menu-list{
+    .menu-list {
         max-width: 650px;
     }
 
@@ -787,6 +799,14 @@ main {
         margin-top: -0.4em;
     }
 
+    /* Om sida */
+
+    .about-main {
+        margin-top: 10em;
+        margin-left: 2em;
+        margin-right: 2em;
+        font-size: 0.9em;
+    }
 
 }
 
@@ -799,10 +819,15 @@ main {
     }
 
     /* Meny */
-    .menu-container h2{
+    .menu-container h2 {
         padding-bottom: 2em;
     }
 
-  
+    /* Om sida */
+
+    .about-container p {
+        font-size: 1.2em;
+        width: 80%;
+    }
 
 }
