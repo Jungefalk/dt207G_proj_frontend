@@ -96,7 +96,6 @@ async function getComments() {
 //Lägg till kommentar
 async function postComments() {
 
-    //hämta id:n
 
 
     //kontrollera inputfälten
@@ -150,9 +149,6 @@ async function deleteComments() {
 //Hämta gelato
 async function getGelato() {
 
-    //hämta id
-
-
     //Get-anrop
     try {
         const response = await fetch(`https://dt207g-proj-backend.onrender.com/api/gelato`)
@@ -202,8 +198,6 @@ async function deleteGelato() {
 //Hämta topping
 async function getTopping() {
 
-    //hämta id
-
 
     //Get-anrop
     try {
@@ -246,9 +240,6 @@ async function deleteTopping() {
 
 //Hämta drink
 async function getDrink() {
-
-    //hämta id
-
 
     //Get-anrop
     try {
