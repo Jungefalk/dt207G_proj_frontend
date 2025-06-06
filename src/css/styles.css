@@ -164,9 +164,10 @@ main {
 .about-product {
     display: flex;
     justify-content: center;
-    width: 90%;
     margin: 0 auto;
-    margin-top: 2em;
+    max-width: 1200px;
+    margin-top: 3em;
+    margin-bottom: 3em;
 }
 
 .about-product img {
@@ -183,8 +184,8 @@ main {
 .about-product-ul {
     font-size: 1.2em;
     line-height: 1.8em;
-    margin-right: 5em;
     margin-top: 2em;
+    padding: 2em;
 }
 
 .comment-section {
@@ -752,12 +753,12 @@ main {
     }
 
     .about-product {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
+    
+        max-width: 800px;
     }
 
     .about-product-ul {
-        font-size: 0.9em;
+        font-size: 1em;
         margin-bottom: 2em;
     }
 
