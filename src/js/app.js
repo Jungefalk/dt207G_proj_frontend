@@ -16,6 +16,8 @@ let menuGelatoEl = document.getElementById("menu-gelato");
 let menuToppingEl = document.getElementById("menu-topping");
 let menuDrinkEl = document.getElementById("menu-drink");
 let adminCommentListEl = document.getElementById("admin-comment-list");
+let adminGelatoListEl = document.getElementById("admin-gelato-list");
+let adminToppingListEl = document.getElementById("admin-topping-list");
 
 
 //händelselyssnare
@@ -99,7 +101,7 @@ async function getComments() {
             <p>${comment.rating}</p>
             <p>${comment.comment}</p>
             <p>${formattedDate}</p>
-            <button id="deleteComBtn">Ta bort</button>`
+            <button id="deletComBtn">Ta bort</button>`
 
 
                 adminCommentListEl.appendChild(newArticleEl)
@@ -114,8 +116,6 @@ async function getComments() {
 
 //Lägg till kommentar
 async function postComments() {
-
-
 
     //kontrollera inputfälten
     if (nameEl.value === "") {
@@ -168,6 +168,10 @@ async function deleteComments() {
 //Hämta gelato
 async function getGelato() {
 
+    //töm innerHTML
+    if (menuGelatoEl) menuGelatoEl.innerHTML = "";
+    if (adminGelatoListEl) adminGelatoListEl.innerHTML = "";
+
     //Get-anrop
     try {
         const response = await fetch(`https://dt207g-proj-backend.onrender.com/api/gelato`)
@@ -177,17 +181,35 @@ async function getGelato() {
 
         const data = await response.json();
 
+        //Loopa, kontrollera att elementet finns och skriv ut till innerHTML
         data.forEach(gelato => {
 
-            let newArticleEl = document.createElement("article");
-            newArticleEl.innerHTML = `
+            //skriv ut till meny
+            if (menuGelatoEl) {
+                let newArticleEl = document.createElement("article");
+                newArticleEl.innerHTML = `
             <h3>${gelato.name}</h3>
             <p>${gelato.ingredients}</p>
             <p>${gelato.info}</p>
             <p>${gelato.price} kr</p>
             `
-            menuGelatoEl.appendChild(newArticleEl);
+                menuGelatoEl.appendChild(newArticleEl);
+            }
 
+            //skriv ut till admin-sida
+            if (adminGelatoListEl) {
+                let newArticleEl = document.createElement("article");
+                newArticleEl.innerHTML = `
+            <h3>${gelato.name}</h3>
+            <p>${gelato.ingredients}</p>
+            <p>${gelato.info}</p>
+            <p>${gelato.price} kr</p>
+            <button>Ta bort</button>
+            <button>Uppdatera</button>
+            `
+
+                adminGelatoListEl.appendChild(newArticleEl);
+            }
         });
 
         console.log(data);
@@ -217,6 +239,8 @@ async function deleteGelato() {
 //Hämta topping
 async function getTopping() {
 
+    if(menuToppingEl) menuToppingEl.innerHTML = "";
+    if(adminToppingListEl) adminToppingListEl.innerHTML = "";
 
     //Get-anrop
     try {
@@ -227,15 +251,30 @@ async function getTopping() {
 
         const data = await response.json();
 
+        //Loopa, kontrollera att emelent finns och skriv ut till innerHTML
         data.forEach(topping => {
 
-            let newArticleEl = document.createElement("article");
-            newArticleEl.innerHTML = `
+            //Skriv ut till meny
+            if (menuToppingEl) {
+                let newArticleEl = document.createElement("article");
+                newArticleEl.innerHTML = `
             <h3>${topping.name}</h3>
             <p>${topping.price} kr</p>
             `
-            menuToppingEl.appendChild(newArticleEl);
+                menuToppingEl.appendChild(newArticleEl);
+            };
 
+            //skriv ut till adminsida
+            if (adminToppingListEl) {
+
+                let newArticleEl = document.createElement("article");
+                newArticleEl.innerHTML = `
+            <h3>${topping.name}</h3>
+            <p>${topping.price} kr</p>
+            <button id="deleteToppingBtn">Ta bort</button>
+            `
+                adminToppingListEl.appendChild(newArticleEl);
+            };
         });
 
         console.log(data);

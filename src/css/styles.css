@@ -506,12 +506,12 @@ main {
     text-decoration: underline;
 }
 
-.admin-menu {
+.admin-menu article{
     background-color: #F7CFCF;
     padding: 1.5em 3em 1.5em 3em;
     border-radius: 10px;
     box-shadow: 0 4 4 0 rgba(0, 0, 0, 0.3);
-    margin-top: em;
+    margin-top: 2em;
     margin-bottom: 2em;
     max-width: 400px;
 }
