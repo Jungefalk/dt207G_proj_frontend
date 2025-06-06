@@ -94,10 +94,12 @@ async function getComments() {
             //Skapa article-elemnt och skrit ut till admin-sida
             if (adminCommentListEl) {
                 let newArticleEl = document.createElement("article");
+                newArticleEl.classList.add("admin-comment")
                 newArticleEl.innerHTML = `<h4>${comment.name}</h4>
             <p>${comment.rating}</p>
             <p>${comment.comment}</p>
-            <p>${formattedDate}</p>`
+            <p>${formattedDate}</p>
+            <button id="deleteComBtn">Ta bort</button>`
 
 
                 adminCommentListEl.appendChild(newArticleEl)
