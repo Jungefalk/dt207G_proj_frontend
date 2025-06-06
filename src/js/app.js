@@ -15,6 +15,7 @@ let recensionEl = document.getElementById("recension");
 let menuGelatoEl = document.getElementById("menu-gelato");
 let menuToppingEl = document.getElementById("menu-topping");
 let menuDrinkEl = document.getElementById("menu-drink");
+let adminCommentListEl = document.getElementById("admin-comment-list");
 
 
 //händelselyssnare
@@ -38,12 +39,14 @@ function init() {
 
 //Hämta kommentarer
 async function getComments() {
+    console.log("get comment körs...")
 
 
     //Töm innerHTML
-    commentListEl.innerHTML = "";
-    nameInputErr.innerHTML = "";
-    ratingInputErr.innerHTML = "";
+    if (commentListEl) commentListEl.innerHTML = "";
+    if (adminCommentListEl) adminCommentListEl.innerHTML = "";
+    if (nameInputErr) nameInputErr.innerHTML = "";
+    if (ratingInputErr) ratingInputErr.innerHTML = "";
 
 
     try {
@@ -77,14 +80,28 @@ async function getComments() {
             let formattedDate = `${year}-${month}-${day}`
 
             //skapa article-element och skriv ut till innerHTML
-            let newArticleEl = document.createElement("article");
-            newArticleEl.classList.add("comment")
-            newArticleEl.innerHTML = `<h4>${comment.name}</h4>
+            if (commentListEl) {
+                let newArticleEl = document.createElement("article");
+                newArticleEl.classList.add("comment")
+                newArticleEl.innerHTML = `<h4>${comment.name}</h4>
             <p>${comment.rating}</p>
             <p>${comment.comment}</p>
             <p>${formattedDate}</p>`
 
-            commentListEl.appendChild(newArticleEl);
+                commentListEl.appendChild(newArticleEl);
+            };
+
+            //Skapa article-elemnt och skrit ut till admin-sida
+            if (adminCommentListEl) {
+                let newArticleEl = document.createElement("article");
+                newArticleEl.innerHTML = `<h4>${comment.name}</h4>
+            <p>${comment.rating}</p>
+            <p>${comment.comment}</p>
+            <p>${formattedDate}</p>`
+
+
+                adminCommentListEl.appendChild(newArticleEl)
+            };
         });
 
 
