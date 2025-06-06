@@ -9,6 +9,12 @@ let postCommentBtnEl = document.getElementById("postCommentBtn");
 let nameInputErr = document.getElementById("nameInputErr");
 let ratingInputErr = document.getElementById("ratingInputErr");
 let commentListEl = document.getElementById("comment-list");
+let nameEl = document.getElementById("name");
+let ratingEl = document.getElementById("rating");
+let recensionEl = document.getElementById("recension");
+let menuGelatoEl = document.getElementById("menu-gelato");
+let menuToppingEl = document.getElementById("menu-topping");
+let menuDrinkEl = document.getElementById("menu-drink");
 
 
 //händelselyssnare
@@ -91,9 +97,7 @@ async function getComments() {
 async function postComments() {
 
     //hämta id:n
-    let nameEl = document.getElementById("name");
-    let ratingEl = document.getElementById("rating");
-    let recensionEl = document.getElementById("recension");
+
 
     //kontrollera inputfälten
     if (nameEl.value === "") {
@@ -147,7 +151,7 @@ async function deleteComments() {
 async function getGelato() {
 
     //hämta id
-    let menuGelatoEl = document.getElementById("menu-gelato");
+
 
     //Get-anrop
     try {
@@ -199,7 +203,7 @@ async function deleteGelato() {
 async function getTopping() {
 
     //hämta id
-    let menuToppingEl = document.getElementById("menu-topping");
+
 
     //Get-anrop
     try {
@@ -244,7 +248,7 @@ async function deleteTopping() {
 async function getDrink() {
 
     //hämta id
-    let menuDrinkEl = document.getElementById("menu-drink");
+
 
     //Get-anrop
     try {
