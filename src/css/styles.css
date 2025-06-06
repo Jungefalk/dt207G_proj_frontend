@@ -448,6 +448,7 @@ main {
 .update-container h1 {
     font-family: "Rampart One", sans-serif;
     font-size: 3em;
+    margin-bottom: 2em;
 }
 
 .update-container h2 {
@@ -455,6 +456,7 @@ main {
     text-transform: uppercase;
     font-weight: 500;
     padding-bottom: 1em;
+    margin-top: -1em;
 }
 
 .update-container input {
@@ -487,7 +489,7 @@ main {
 }
 
 .toggle-btn {
-    margin-bottom: 2em;
+    margin-bottom: 1em;
 }
 
 .update-container button {
@@ -506,14 +508,21 @@ main {
     text-decoration: underline;
 }
 
+.list-layout{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 7em;
+}
+
 .admin-menu article{
     background-color: #F7CFCF;
-    padding: 1.5em 3em 1.5em 3em;
+    padding: 1.5em;
     border-radius: 10px;
     box-shadow: 0 4 4 0 rgba(0, 0, 0, 0.3);
     margin-top: 2em;
     margin-bottom: 2em;
     max-width: 400px;
+    min-width: 250px;
 }
 
 .admin-menu button {

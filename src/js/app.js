@@ -18,6 +18,7 @@ let menuDrinkEl = document.getElementById("menu-drink");
 let adminCommentListEl = document.getElementById("admin-comment-list");
 let adminGelatoListEl = document.getElementById("admin-gelato-list");
 let adminToppingListEl = document.getElementById("admin-topping-list");
+let adminDrinkListEl = document.getElementById("admin-drink-list");
 
 
 //händelselyssnare
@@ -204,8 +205,8 @@ async function getGelato() {
             <p>${gelato.ingredients}</p>
             <p>${gelato.info}</p>
             <p>${gelato.price} kr</p>
-            <button>Ta bort</button>
-            <button>Uppdatera</button>
+            <button id="deleteGelatoBtn">Ta bort</button>
+            <button ud="updateGelatoBtn">Uppdatera</button>
             `
 
                 adminGelatoListEl.appendChild(newArticleEl);
@@ -239,8 +240,9 @@ async function deleteGelato() {
 //Hämta topping
 async function getTopping() {
 
-    if(menuToppingEl) menuToppingEl.innerHTML = "";
-    if(adminToppingListEl) adminToppingListEl.innerHTML = "";
+    //Töm innerHTML
+    if (menuToppingEl) menuToppingEl.innerHTML = "";
+    if (adminToppingListEl) adminToppingListEl.innerHTML = "";
 
     //Get-anrop
     try {
@@ -299,6 +301,10 @@ async function deleteTopping() {
 //Hämta drink
 async function getDrink() {
 
+    //Töm innerHTML
+    if (menuDrinkEl) menuDrinkEl.innerHTML = "";
+    if (adminDrinkListEl) adminDrinkListEl.innerHTML = "";
+
     //Get-anrop
     try {
         const response = await fetch(`https://dt207g-proj-backend.onrender.com/api/drink`)
@@ -308,15 +314,28 @@ async function getDrink() {
 
         const data = await response.json();
 
+        //Loopa, kontrollera att element finns och skriv ut till innerHTML
         data.forEach(drink => {
 
-            let newArticleEl = document.createElement("article");
-            newArticleEl.innerHTML = `
+            if (menuDrinkEl) {
+                let newArticleEl = document.createElement("article");
+                newArticleEl.innerHTML = `
             <h3>${drink.name}</h3>
             <p>${drink.price} kr</p>
             `
-            menuDrinkEl.appendChild(newArticleEl);
+                menuDrinkEl.appendChild(newArticleEl);
+            };
 
+            //skriv ut till adminsida
+            if (adminDrinkListEl) {
+                let newArticleEl = document.createElement("article");
+                newArticleEl.innerHTML = `
+            <h3>${drink.name}</h3>
+            <p>${drink.price} kr</p>
+            <button id="deleteDrinkBtn">Ta bort</button>
+            `
+                adminDrinkListEl.appendChild(newArticleEl);
+            };
         });
 
         console.log(data);
