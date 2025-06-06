@@ -16,6 +16,10 @@ html {
 
 /* Header */
 
+.small-screen-nav {
+    display: none;
+}
+
 .header-container {
     position: fixed;
     width: 100%;
@@ -29,6 +33,7 @@ html {
 .nav-right .current {
     border-bottom: 2px solid black;
     border-radius: 2px;
+
 }
 
 .logo img {
@@ -118,19 +123,29 @@ footer i {
     padding: 0 0.5em 1em 0.5em;
 }
 
-.footer-nav ul li {
+.footer-nav ul,
+.small-screen-nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.footer-nav ul li,
+.small-screen-nav ul li {
     display: inline-block;
     font-family: "Rampart One", sans-serif;
     padding: 0 0.5em 0.5em 0.5em;
     font-size: 1.7em;
 }
 
-.footer-nav a {
+.footer-nav a,
+.small-screen-nav a {
     color: black;
     text-decoration: none;
 }
 
-.footer-nav a:hover {
+.footer-nav a:hover,
+.small-screen-nav a:hover {
     border-bottom: 2px solid black;
 }
 
@@ -508,13 +523,13 @@ main {
     text-decoration: underline;
 }
 
-.list-layout{
+.list-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 7em;
 }
 
-.admin-menu article{
+.admin-menu article {
     background-color: #F7CFCF;
     padding: 1.5em;
     border-radius: 10px;
@@ -568,4 +583,123 @@ main {
 
 .admin-comment button {
     margin-top: 0.5em;
+}
+
+/*  Små skärmar  */
+
+@media (max-width: 700px) {
+
+    /*header och footer*/
+    .nav-left,
+    .nav-right {
+        display: none;
+    }
+
+
+    .footer-nav,
+    .small-screen-nav {
+        display: block;
+        font-size: 0.62em;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    /*startsida*/
+
+    .hero-img {
+        margin-top: -2.5em;
+    }
+
+    .about-product {
+        width: 90%;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    .about-product-ul {
+        margin-right: 0;
+    }
+
+    .about-product h2 {
+        text-align: center;
+    }
+
+    .comment-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+        width: 100%;
+    }
+
+    .comment-list {
+        grid-template-columns: 1fr;
+        max-height: 375px;
+    }
+
+    .comment h4 {
+        font-size: 1em;
+        margin-top: 0.1em;
+    }
+
+}
+
+@media (min-width: 501px) {
+
+    /*startsida*/
+
+    .small-screen-nav {
+        font-size: 0.9em;
+    }
+
+    .hero-img {
+        margin-top: -1em;
+    }
+
+    @media (min-width: 701px) and (max-width: 1050px) {
+
+        .nav-left li,
+        .nav-right li {
+            font-size: 0.6em;
+            margin-bottom: 2.5em;
+        }
+
+        .hero-img {
+            margin-top: -4em;
+        }
+
+        .about-product {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+        }
+
+        .about-product-ul {
+            font-size: 0.9em;
+            margin-bottom: 2em;
+        }
+
+        .about-product img {
+            width: 100%;
+        }
+
+        .comment {
+            font-size: 0.9em;
+        }
+
+        .comment h4 {
+            font-size: 1em;
+            margin-top: 0.5em;
+        }
+
+    }
+
+    @media (min-width: 920px) and (max-width: 1050px) {
+
+        .nav-left li,
+        .nav-right li {
+            font-size: 0.9em;
+        }
+
+    }
+
 }
